@@ -7,12 +7,12 @@ import { MaintenanceConfig, PageConfig, WorkerConfig } from './types/config'
 
 const pageConfig: PageConfig = {
   // Title for your status page
-  title: "lyc8503's Status Page",
+  title: "tutolmin's Status Page",
   // Links shown at the header of your status page, could set `highlight` to `true`
   links: [
-    { link: 'https://github.com/lyc8503', label: 'GitHub' },
-    { link: 'https://blog.lyc8503.net/', label: 'Blog' },
-    { link: 'mailto:me@lyc8503.net', label: 'Email Me', highlight: true },
+    { link: 'https://github.com/tutolmin', label: 'GitHub' },
+    { link: 'https:/tutolmin.ru/', label: 'Web' },
+    { link: 'mailto:tutolmin@gmail.com', label: 'Email Me', highlight: true },
   ],
 }
 
@@ -28,11 +28,11 @@ const workerConfig: WorkerConfig = {
       // `method` should be a valid HTTP Method
       method: 'GET',
       // `target` is a valid URL
-      target: 'https://example.com',
+      target: 'https://tutolmin.ru',
       // [OPTIONAL] `tooltip` is ONLY used at status page to show a tooltip
-      tooltip: 'This is a tooltip for this monitor',
+      tooltip: 'My homepage',
       // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
-      statusPageLink: 'https://example.com',
+      statusPageLink: 'https://tutolmin.ru',
       // [OPTIONAL] `expectedCodes` is an array of acceptable HTTP response codes, if not specified, default to 2xx
       expectedCodes: [200],
       // [OPTIONAL] `timeout` in millisecond, if not specified, default to 10000
@@ -40,7 +40,7 @@ const workerConfig: WorkerConfig = {
       // [OPTIONAL] headers to be sent
       headers: {
         'User-Agent': 'Uptimeflare',
-        Authorization: 'Bearer YOUR_TOKEN_HERE',
+//        Authorization: 'Bearer YOUR_TOKEN_HERE',
       },
       // [OPTIONAL] body to be sent (require POST/PUT/PATCH method)
       // body: 'Hello, world!',
@@ -58,13 +58,13 @@ const workerConfig: WorkerConfig = {
     // Example TCP Monitor
     {
       id: 'test_tcp_monitor',
-      name: 'Example TCP Monitor',
+      name: 'NPM TCP Monitor',
       // `method` should be `TCP_PING` for tcp monitors
       method: 'TCP_PING',
       // `target` should be `host:port` for tcp monitors
-      target: '1.2.3.4:22',
-      tooltip: 'My production server SSH',
-      statusPageLink: 'https://example.com',
+      target: 'bts.tutolmin.ru:4443',
+      tooltip: 'NGINX Proxy Manager',
+//      statusPageLink: 'https://example.com',
       timeout: 5000,
     },
   ],
@@ -74,7 +74,7 @@ const workerConfig: WorkerConfig = {
     // More info at Wiki: https://github.com/lyc8503/UptimeFlare/wiki/Setup-notification
     webhook: {
       // [Required] webhook URL (example: Telegram Bot API)
-      url: 'https://api.telegram.org/bot123456:ABCDEF/sendMessage',
+      url: 'https://api.telegram.org/9137063803:AAGut2HYM2QSf-FExw7u4Wpw5z08qQZTNQs/sendMessage',
       // [Optional] HTTP method, default to 'GET' for payloadType=param, 'POST' otherwise
       // method: 'POST',
       // [Optional] headers to be sent
@@ -90,14 +90,14 @@ const workerConfig: WorkerConfig = {
       // [Required] payload to be sent
       // $MSG will be replaced with the human-readable notification message
       payload: {
-        chat_id: 12345678,
+        chat_id: 54616533,
         text: '$MSG',
       },
       // [Optional] timeout calling this webhook, in millisecond, default to 5000
       timeout: 10000,
     },
     // [Optional] timezone used in notification messages, default to "Etc/GMT"
-    timeZone: 'Asia/Shanghai',
+    timeZone: 'Europe/Moscow',
     // [Optional] grace period in minutes before sending a notification
     // notification will be sent only if the monitor is down for N continuous checks after the initial failure
     // if not specified, notification will be sent immediately
@@ -124,7 +124,7 @@ const maintenances: MaintenanceConfig[] = [
     start: '2020-01-01T00:00:00+08:00',
     // [Optional] end time of the maintenance, in UNIX timestamp or ISO 8601 format
     // if not specified, the maintenance will be considered as on-going
-    end: '2050-01-01T00:00:00+08:00',
+    end: '2021-01-01T00:00:00+08:00',
     // [Optional] color of the maintenance alert at status page, default to "yellow"
     color: 'blue',
   },
