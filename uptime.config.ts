@@ -55,6 +55,18 @@ const workerConfig: WorkerConfig = {
       // [OPTIONAL] if true, the check will fallback to local if the specified proxy is down
       // checkProxyFallback: true,
     },
+    {
+      id: 'web_sdamexam',
+      name: 'SdamExam Homepage',
+      method: 'GET',
+      target: 'https://sdamexam.ru',   
+    },
+    {
+      id: 'web_kuma',
+      name: 'Uptime Kuma Status Page',
+      method: 'GET',
+      target: 'https://kuma.tutolmin.ru/status/heartbeat',   
+    },
     // Example TCP Monitor
     {
       id: 'test_tcp_monitor',
