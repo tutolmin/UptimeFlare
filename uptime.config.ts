@@ -11,7 +11,7 @@ const pageConfig: PageConfig = {
   // Links shown at the header of your status page, could set `highlight` to `true`
   links: [
     { link: 'https://github.com/tutolmin', label: 'GitHub' },
-    { link: 'https:/tutolmin.ru/', label: 'Web' },
+    { link: 'https://tutolmin.ru/', label: 'Web' },
     { link: 'mailto:tutolmin@gmail.com', label: 'Email Me', highlight: true },
   ],
 }
