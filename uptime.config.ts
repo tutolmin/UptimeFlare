@@ -69,7 +69,7 @@ const workerConfig: WorkerConfig = {
     },
     // Example TCP Monitor
     {
-      id: 'test_tcp_monitor',
+      id: 'npm_tcp_monitor',
       name: 'NPM TCP Monitor',
       // `method` should be `TCP_PING` for tcp monitors
       method: 'TCP_PING',
@@ -77,6 +77,22 @@ const workerConfig: WorkerConfig = {
       target: 'bts.tutolmin.ru:4443',
       tooltip: 'NGINX Proxy Manager',
 //      statusPageLink: 'https://example.com',
+      timeout: 5000,
+    },
+    {
+      id: 'vps_ssh_tcp_monitor',
+      name: 'VPS SSH TCP Monitor',
+      method: 'TCP_PING',
+      target: 'vps.tutolmin.ru:22',
+      tooltip: 'VPS SSH',
+      timeout: 5000,
+    },
+    {
+      id: 'ams_ssh_tcp_monitor',
+      name: 'AMS SSH TCP Monitor',
+      method: 'TCP_PING',
+      target: 'ams.tutolmin.ru:19502',
+      tooltip: 'AMS SSH',
       timeout: 5000,
     },
   ],
