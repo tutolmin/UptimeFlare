@@ -91,7 +91,7 @@ const workerConfig: WorkerConfig = {
       id: 'ams_ssh_tcp_monitor',
       name: 'AMS SSH TCP Monitor',
       method: 'TCP_PING',
-      target: 'ams.tutolmin.ru:19502',
+      target: 'ams.tutolmin.ru:22',
       tooltip: 'AMS SSH',
       timeout: 5000,
     },
