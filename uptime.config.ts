@@ -102,7 +102,7 @@ const workerConfig: WorkerConfig = {
     // More info at Wiki: https://github.com/lyc8503/UptimeFlare/wiki/Setup-notification
     webhook: {
       // [Required] webhook URL (example: Telegram Bot API)
-      url: 'https://api.telegram.org/bot123456:ABCDEF/sendMessage',
+      url: require('process').env.MY_TG_API_TOKEN as string,
       // [Optional] HTTP method, default to 'GET' for payloadType=param, 'POST' otherwise
       // method: 'POST',
       // [Optional] headers to be sent
