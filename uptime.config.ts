@@ -73,8 +73,8 @@ const workerConfig: WorkerConfig = {
       id: 'web_beszel',
       name: 'Beszel Monitoring Page',
       method: 'GET',
-      target: 'https://beszel.tutolmin.ru:4443',   
-      statusPageLink: 'https://beszel.tutolmin.ru:4443',     
+      target: 'https://bz.tutolmin.ru:4443',   
+      statusPageLink: 'https://bz.tutolmin.ru:4443',     
     },
     // Example TCP Monitor
     {
