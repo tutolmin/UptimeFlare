@@ -60,12 +60,21 @@ const workerConfig: WorkerConfig = {
       name: 'SdamExam Homepage',
       method: 'GET',
       target: 'https://sdamexam.ru',   
+      statusPageLink: 'https://sdamexam.ru',
     },
     {
       id: 'web_kuma',
       name: 'Uptime Kuma Status Page',
       method: 'GET',
       target: 'https://kuma.tutolmin.ru/status/heartbeat',   
+      statusPageLink: 'https://kuma.tutolmin.ru/status/heartbeat',     
+    },
+     {
+      id: 'web_beszel',
+      name: 'Beszel Monitoring Page',
+      method: 'GET',
+      target: 'https://beszel.tutolmin.ru:4443',   
+      statusPageLink: 'https://beszel.tutolmin.ru:4443',     
     },
     // Example TCP Monitor
     {
